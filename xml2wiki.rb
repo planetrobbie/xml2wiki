@@ -43,7 +43,6 @@ class MyCheatsheet < Nokogiri::XML::SAX::Document
 	    "details" => "|<tt>%%</tt>",
 	    "comments" => "|''%%''",
 	    "footer" => "|-\n| colspan=\"3\" style=\"text-align:center;\"|\n%%\n|}</div>",
-            "<br />" => "<br />"
 	    }
   end
 
@@ -59,6 +58,9 @@ class MyCheatsheet < Nokogiri::XML::SAX::Document
       # add template content depending on tag name
       @cheatsheet << @@template[@tag]
 
+      # convert line break to HTML entitie
+      text.sub!(/\\n/,"<br />")
+      
       # apply tag content to template
       @cheatsheet.sub!(/%%/,text)
     else

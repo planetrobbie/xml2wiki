@@ -2,9 +2,9 @@
     <header>Git Cheatsheet</header>
     <section>Getting and creating projects</section>
     <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
+      <description>initialize a directory as a Git Repository</description>
+      <details>$ cd project \n$ git init</details>
+      <comments>there is now a .git subdirectory in your project, this is your Git repository where all the data of your project snapshots are stored</comments>
     </cmd>
     <cmd>
       <description></description>
@@ -188,9 +188,7 @@
     </cmd>
     <section>References</section>
     <footer>
-[http://www.kernel.org/pub/software/scm/git/docs/everyday.html Everyday GIT With 20 Commands Or So]
-
-[http://gitref.org/ Git Reference]</footer>
+[http://www.kernel.org/pub/software/scm/git/docs/everyday.html Everyday GIT With 20 Commands Or So]\n[http://gitref.org/ Git Reference]</footer>
 </root>
 
 
