@@ -1,0 +1,199 @@
+<root>
+    <header>Git Cheatsheet</header>
+    <section>Getting and creating projects</section>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+    <cmd>
+      <description></description>
+      <details></details>
+      <comments></comments>
+    </cmd>
+<section>Branching and Merging</section>
+    <cmd>
+      <description>list your available branches</description>
+      <details>$ git branch</details>
+    </cmd>
+    <cmd>
+      <description>create a new branch</description>
+      <details>$ git branch (branchname)</details>
+      <comments>you can think of it like a bookmark for where you currently are. When you start on work it is very useful to always start it in a branch and then merge it in and delete the branch when you're done. It's easy to rollback then.</comments>
+    </cmd>
+    <cmd>
+      <description>switch to a new branch context</description>
+      <details>$ git checkout (branch)</details>
+      <comments>use -b to create and immediatly switch to a new branch instead of using <tt>git branch newbranch; git checkout newbranch</tt></comments>
+    </cmd>
+    <cmd>
+      <description>delete a branch</description>
+      <details>$ git branch -d (branchname)</details>
+      <comments>Already merged branch can be deleted</comments>
+    </cmd>
+    <cmd>
+      <description>merge a branch context into your current one</description>
+      <details>$ git merge (branchname)</details>
+      <comments>branchname will be merged in the current context</comments>
+    </cmd>
+    <section>References</section>
+    <footer>
+[http://www.kernel.org/pub/software/scm/git/docs/everyday.html Everyday GIT With 20 Commands Or So]
+
+[http://gitref.org/ Git Reference]</footer>
+</root>
+
+
+
+
+
