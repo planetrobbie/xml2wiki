@@ -30,6 +30,7 @@ require 'nokogiri'
 
 class MyCheatsheet < Nokogiri::XML::SAX::Document
   def initialize
+    @tags = []
     @cheatsheet = ""
 
     # Wikipedia inspired template, not human readable but who cares ;)
@@ -45,40 +46,45 @@ class MyCheatsheet < Nokogiri::XML::SAX::Document
 	    "footer" => "|-\n| colspan=\"3\" style=\"text-align:center;\"|\n%%\n|}</div>",
 	    }
   end
-
+  
   # this event offers an opportunity to store current tag name for later processing
   def start_element(name, attrs = [])
-    @tag = name
+    # keep track of the nesting
+    @tags.push(name)
+
+    if @@template[name]
+      # add template content depending on tag name
+      @cheatsheet << @@template[name]
+    else
+      # keep as is original HTML tags if tag not defined in our template
+      @cheatsheet.sub!(/%%/,"<#{name}>%%") unless name.nil?
+    end
   end
  
   # this is where we apply the template, within tag content 
-  def characters(text)
-    if @@template[@tag]
-      
-      # add template content depending on tag name
-      @cheatsheet << @@template[@tag]
-
-      # convert line break to HTML entitie
-      text.sub!(/\\n/,"<br />")
-      
-      # apply tag content to template
-      @cheatsheet.sub!(/%%/,text)
-    else
-
-      # keep as is original HTML tags if tag not defined in our template
-      @cheatsheet << "<#{@tag}>#{text}</#{@tag}>" unless @tag.nil?
-    end
+  def characters(text)    
+    # apply tag content to template and move pointer at the end
+    @cheatsheet.sub!(/%%/,text << "%%")
   end
   
   def end_element(name) 
-    if name == "root"
-      # output cheatsheet at last closing tag
-      puts @cheatsheet
-    else
+    if @@template[@tags.last] 
+      # pointer no more needed at tag end within a template
+      @cheatsheet.sub!(/%%/,"")
       @cheatsheet << "\n"
+    else
+      #close HTML entity
+      @cheatsheet.sub!(/%%/,"</#{@tags.last}>%%")
     end
-    @tag = nil 
+    @tags.pop
   end 
+  
+  def end_document
+    # convert line breaks to HTML entities
+    @cheatsheet.gsub!(/\\n/,"<br />")
+      
+    puts @cheatsheet
+  end
 end
 
 def process_file(file)

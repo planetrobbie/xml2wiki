@@ -7,159 +7,70 @@
       <comments>there is now a .git subdirectory in your project, this is your Git repository where all the data of your project snapshots are stored</comments>
     </cmd>
     <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
+      <description>copy a git repository so you can add to it</description>
+      <details>$ git clone git://github.com/schacon/simplegit.git</details>
+      <comments>this will copy the entire history of that project so you have it locally, you'll also have a .git subdirectory that will store all data</comments>
+    </cmd>
+    <section>Snapshotting</section>
+    <cmd>
+      <description>adds file contents to the staging area</description>
+      <details>$ git add ...</details>
+      <comments>you run git add on a file when you want to include whatever changes you've made to it in your next commit snapshot. Gives more granularity then other RCS</comments>
     </cmd>
     <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
+      <description>view the status of your files in the working directory and staging area</description>
+      <details>$ git status -s</details>
+      <comments>you run git status to see if anything has been modified and/or staged since your last commit so you can decide if you want to commit a new snapshot and what will be recorded in it.\n<tt>-s</tt> gives you short output of the status, 1st column for staging area, second for working area</comments>
     </cmd>
     <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
+      <description>show diff of unstaged changes</description>
+      <details>$ git diff</details>
+      <comments>so where git status will show you what files have changed and/or been staged since your last commit, git diff will show you what those changes actually are, line by line. It's generally a good follow-up command to git status</comments>
     </cmd>
     <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
+      <description>show diff of staged changes</description>
+      <details>$ git diff --cached</details>
+      <comments>this will show you the changes that will currently go into the next commit snapshot.</comments>
     </cmd>
     <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
+      <description>show diff of all staged or unstaged changes</description>
+      <details>$ git diff HEAD</details>
+      <comments>this basically means you want to see the difference between your working directory and the last commit, ignoring the staging area\nwith Tag instead, will show what has changed since this tag</comments>
     </cmd>
     <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
+      <description>show summary of changes instead of a full diff</description>
+      <details>$ git diff --stat</details>
+      <comments>if we don't want the full diff output, but we want more than the git status output</comments>
     </cmd>
     <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
+<cmd>
+      <description>compare two divergent branches</description>
+      <details>$ git diff branchA...branchB</details>
+      <comments>Git will automatically figure out what the common commit (otherwise known as the "merge base") of the two commit is and do the diff off of that.</comments>
     </cmd>
     <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
+      <description>configure name and email</description>
+      <details>$ git config --global user.name 'Your Name'\n$ git config --global user.email you@somedomain.com</details>
+      <comments>will be recorded with every commit done</comments>
     </cmd>
     <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
+      <description>records a snapshot of the staging area</description>
+      <details>$ git add hello.rb\n$ git status -s\nM hello.rb\n$ git commit -m 'my hola mundo changes'</details>
     </cmd>
     <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
+      <description>stage all tracked, modified files before the commit</description>
+      <details>$ git commit -am 'new commit'</details>
+      <comments>to avoid to use git add for each modified file</comments>
     </cmd>
     <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
+      <description>unstage changes that you have staged</description>
+      <details>$ git reset HEAD -- hello.rb</details>
+      <comments>this command unstage hello.rb, -- starts file path argument</comments>
     </cmd>
     <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
-    </cmd>
-    <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
-    </cmd>
-    <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
-    </cmd>
-    <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
-    </cmd>
-    <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
-    </cmd>
-    <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
-    </cmd>
-    <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
-    </cmd>
-    <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
-    </cmd>
-    <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
-    </cmd>
-    <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
-    </cmd>
-    <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
-    </cmd>
-    <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
-    </cmd>
-    <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
-    </cmd>
-    <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
-    </cmd>
-    <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
-    </cmd>
-    <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
-    </cmd>
-    <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
-    </cmd>
-    <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
-    </cmd>
-    <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
-    </cmd>
-    <cmd>
-      <description></description>
-      <details></details>
-      <comments></comments>
+      <description>remove files from the staging area</description>
+      <details>$ git rm file</details>
+      <comments>kicks the file off the stage entirely, so that it's not included in the next commit snapshot, thereby effectively deleting it. Add --cached to leave file on disk.</comments>
     </cmd>
 <section>Branching and Merging</section>
     <cmd>
@@ -174,7 +85,7 @@
     <cmd>
       <description>switch to a new branch context</description>
       <details>$ git checkout (branch)</details>
-      <comments>use -b to create and immediatly switch to a new branch instead of using <tt>git branch newbranch; git checkout newbranch</tt></comments>
+      <comments><tt>-b</tt> to create and immediatly switch to a new branch instead of using git branch newbranch; git checkout newbranch</comments>
     </cmd>
     <cmd>
       <description>delete a branch</description>
@@ -186,9 +97,79 @@
       <details>$ git merge (branchname)</details>
       <comments>branchname will be merged in the current context</comments>
     </cmd>
+    <cmd>
+      <description>show commit history of a branch</description>
+      <details>$ git log (branchname)</details>
+      <comments><tt>--oneline</tt> for a compact output\n<tt>--graph</tt> for a topology view\n<tt>^otherbranch</tt> to exclude otherbranch from report\n<tt>--decorate</tt> to display tags</comments>
+    </cmd>
+    <cmd>
+      <description>tag a point in history as important</description>
+      <details>$ git tag -a v1.0</details>
+      <comments>tag last commit (HEAD) as v1.0 by adding a permanent bookmark at a specific commit.\n<tt>commit SHA</tt> at the end to tag another commit</comments>
+    </cmd>
+<section>Sharing and updating projects</section>
+    <cmd>
+      <description>list, add and delete remote repository aliases</description>
+      <details>$ git remote</details>
+      <comments>Git repositories are all equal and you simply synchronize between them. This command help manage alias or nickname for each remote repository URL to avoid using full URL every time\n<tt>-v</tt> to display full URLs</comments>
+    </cmd>
+    <cmd>
+      <description>create a new alias for a remote repository</description>
+      <details>$ git remote add [alias] [url]</details>
+      <comments>alias names are arbitrary </comments>
+    </cmd>
+    <cmd>
+      <description>removing an existing remote alias</description>
+      <details>$ git remote rm [alias]</details>
+    </cmd>
+    <cmd>
+      <description>download new branches and data from a remote repository</description>
+      <details>$ git fetch</details>
+      <comments>will synchronize you with another repo, pulling down any data that you do not have locally and giving you bookmarks to where each branch on that remote was when you synchronized.</comments>
+    </cmd>
+    <cmd>
+      <description>fetch from a remote repo and try to merge into the current branch\n<tt>--all</tt> synchronize all of your remotes</description>
+      <details>$ git pull</details>
+      <comments>run a git fetch immediately followed by a git merge of the branch on that remote that is tracked by whatever branch you are currently in. Prefer running it separatly instead.</comments>
+    </cmd>
+    <cmd>
+      <description>push your new branches and data to a remote repository</description>
+      <details>$ git push [alias] [branch]</details>
+      <comments>attempt to make your [branch] the new [branch] on the [alias] remote. If your branch is already on the server, it will try to update it, if it is not, Git will add it.  If someone else has pushed since you last fetched and merged, the Git server will deny your push until you are up to date.</comments>
+    </cmd>
+<section>Inspection and comparison</section>
+    <cmd>
+      <description>look for only commits from a specific author</description>
+      <details>$ git log --author</details>
+    </cmd>
+    <cmd>
+      <description>filter commits by date authored</description>
+      <details>$ git log --since={2010-04-18} --before={3.weeks.ago}</details>
+      <comments><tt>--until --after</tt> also available</comments>
+    </cmd>
+    <cmd>
+      <description>filter commits by commit message</description>
+      <details>$ git log --grep</details>
+      <comments>Git will logically OR all <tt>--grep</tt> and <tt>--author</tt> arguments. Use <tt>--all-match</tt> to match all\n<tt>--format="%h %an %s"</tt> to modify output format</comments>
+    </cmd>
+    <cmd>
+      <description>filter by introduced diff</description>
+      <details>$ git log -Sstring</details>
+      <comments>tell Git to look through the diff of each commit for a string.</comments>
+    </cmd>
+    <cmd>
+      <description>show patch introduced at each commit</description>
+      <details>$ git log -p</details>
+      <comments><tt>git show [SHA]</tt> do the same with a specific commit SHA</comments>
+    </cmd>
+    <cmd>
+      <description>show diffstat of changes introduced at each commit</description>
+      <details>$ git log --stat</details>
+      <comments>summary of the changes, less verbose then <tt>-p</tt></comments>
+    </cmd>
     <section>References</section>
     <footer>
-[http://www.kernel.org/pub/software/scm/git/docs/everyday.html Everyday GIT With 20 Commands Or So]\n[http://gitref.org/ Git Reference]</footer>
+[http://www.kernel.org/pub/software/scm/git/docs/everyday.html Everyday GIT With 20 Commands Or So]\n[http://gitref.org/ Git Reference]\n[http://progit.org/ Pro Git book]\n[http://jan-krueger.net/development/git-cheat-sheet-extended-edition Git cheat sheet, extended edition]</footer>
 </root>
 
 
