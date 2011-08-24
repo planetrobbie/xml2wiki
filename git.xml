@@ -169,9 +169,8 @@
     </cmd>
     <section>References</section>
     <footer>
-[http://www.kernel.org/pub/software/scm/git/docs/everyday.html Everyday GIT With 20 Commands Or So]\n[http://gitref.org/ Git Reference]\n[http://progit.org/ Pro Git book]\n[http://jan-krueger.net/development/git-cheat-sheet-extended-edition Git cheat sheet, extended edition]</footer>
+[http://www.kernel.org/pub/software/scm/git/docs/everyday.html Everyday GIT With 20 Commands Or So]\n[http://gitref.org/ Git Reference]\n[http://progit.org/ Pro Git book]\n[http://www.xcombinator.com/2010/09/01/git-cheat-sheet-and-class-notes/ one page cheatsheet from x-combinator]\n[http://help.github.com/git-cheat-sheets/ Github cheatsheet]\n[http://jan-krueger.net/development/git-cheat-sheet-extended-edition Jan Krueger cheatsheet]\n[http://devcheatsheet.com/tag/git/ Collection de Cheatsheets]</footer>
 </root>
-
 
 
 
